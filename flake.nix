@@ -4,6 +4,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/65a5c8f";
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+    nix-amd-ai.url = "github:noamsto/nix-amd-ai";
   };
   outputs =
     inputs@{
@@ -22,6 +23,7 @@
           nixos-hardware.nixosModules.framework-amd-ai-300-series
           { nixpkgs.hostPlatform = "x86_64-linux"; }
           sops-nix.nixosModules.sops
+          inputs.nix-amd-ai.nixosModules.default
         ];
       };
     };

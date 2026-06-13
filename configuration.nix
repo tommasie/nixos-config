@@ -21,6 +21,16 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # NPU configuration (configuration from github.com/noamsto/nix-amd-ai)
+  hardware.amd-npu = {
+    enable = true;
+    enableFastFlowLM = true;
+    enableLemonade = false;
+    enableROCm = false;
+    enableVulkan = false;
+    enableImageGen = false;
+  };
+
   networking.hostName = "fw13";
   networking.networkmanager.enable = true;
 
