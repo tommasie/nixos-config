@@ -43,6 +43,8 @@
     extraGroups = [
       "wheel"
       "networkmanager"
+      "video"
+      "render"
     ];
     shell = pkgs.fish;
     home = "/home/thomas";
