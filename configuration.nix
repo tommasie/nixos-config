@@ -96,7 +96,7 @@
     calibre
     obsidian
     brave
-    wine64
+    wineWow64Packages.stable
     retroarch
     containerd
     nerdctl
