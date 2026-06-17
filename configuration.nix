@@ -25,10 +25,12 @@
   hardware.amd-npu = {
     enable = true;
     enableFastFlowLM = true;
-    enableLemonade = false;
+    enableLemonade = true;
     enableROCm = false;
     enableVulkan = false;
     enableImageGen = false;
+
+    lemonade.user = "thomas";
   };
 
   networking.hostName = "fw13";
