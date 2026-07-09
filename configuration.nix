@@ -106,7 +106,6 @@
     proton-vpn
     proton-pass
     nix-prefetch
-    # stremio-linux-shell
     calibre
     obsidian
     brave
@@ -123,6 +122,7 @@
     peazip
     file-roller
     opencode
+    lazygit
   ];
 
   nixpkgs.config.allowUnfree = true;
