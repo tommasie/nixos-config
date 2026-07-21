@@ -24,6 +24,7 @@
   # NPU configuration (configuration from github.com/noamsto/nix-amd-ai)
   hardware.amd-npu = {
     enable = true;
+    enableNPU = true;
     enableFastFlowLM = true;
     enableLemonade = true;
     enableROCm = false;
