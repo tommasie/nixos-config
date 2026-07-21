@@ -1,7 +1,10 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixos-hardware.url = "github:NixOS/nixos-hardware/65a5c8f";
+    nixos-hardware = {
+      url = "github:tommasie/nixos-hardware/framework-13-ai-300-mt7925";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
     nix-amd-ai.url = "github:noamsto/nix-amd-ai";
