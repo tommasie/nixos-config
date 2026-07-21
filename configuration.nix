@@ -99,6 +99,8 @@
     curl
     sudo
     unzip
+    unrar
+    p7zip
     htop
     git
     kitty # Default TTY for Hyprland
