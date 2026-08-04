@@ -141,6 +141,12 @@
   # Steam
   programs.steam = {
     enable = true;
+    extraPackages = with pkgs; [
+      nspr
+      nss
+      atk
+      libxcomposite
+    ];
   };
 
   nix = {
