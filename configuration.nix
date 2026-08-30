@@ -51,6 +51,10 @@
   # Enable the X11 windowing system.
   services.xserver.enable = false;
 
+  users.groups = {
+    media = { };
+  };
+
   users.users.thomas = {
     isNormalUser = true;
     extraGroups = [
@@ -58,6 +62,7 @@
       "networkmanager"
       "video"
       "render"
+      "media"
     ];
     shell = pkgs.fish;
     home = "/home/thomas";
@@ -137,10 +142,18 @@
   # Gnome
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.login.enableGnomeKeyring = true;
 
   # Steam
   programs.steam = {
     enable = true;
+    extraPackages = with pkgs; [
+      nspr
+      nss
+      atk
+      libxcomposite
+    ];
   };
 
   nix = {
@@ -169,6 +182,12 @@
     };
 
   };
+
+  # Create new directories in / and set permissions
+  systemd.tmpfiles.rules = [
+    "d /media 0775 thomas media - -"
+  ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
