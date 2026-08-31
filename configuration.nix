@@ -153,6 +153,8 @@
       nss
       atk
       libxcomposite
+      libxscrnsaver
+      gtk3
     ];
   };
 
