@@ -131,6 +131,7 @@
     file-roller
     opencode
     lazygit
+    pavucontrol
   ];
 
   nixpkgs.config.allowUnfree = true;
