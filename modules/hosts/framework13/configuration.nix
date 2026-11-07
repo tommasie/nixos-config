@@ -115,7 +115,6 @@
         nix-prefetch
         calibre
         obsidian
-        brave
         wineWow64Packages.stable
         retroarch
         containerd
