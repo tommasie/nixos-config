@@ -131,6 +131,10 @@
         opencode
         lazygit
         pavucontrol
+
+        # Python
+        python3
+        uv
       ];
 
       nixpkgs.config.allowUnfree = true;
