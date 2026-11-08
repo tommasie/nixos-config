@@ -3,7 +3,7 @@
 # to /etc/nixos/configuration.nix instead.
 { self, inputs, ... }:
 {
-  flake.nixosModules.fw13Hardware =
+  flake.modules.nixos.fw13Hardware =
     {
       config,
       lib,
