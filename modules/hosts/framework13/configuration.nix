@@ -1,6 +1,6 @@
 { self, inputs, ... }:
 {
-  flake.nixosModules.fw13Configuration =
+  flake.modules.nixos.fw13Configuration =
     {
       config,
       lib,
@@ -10,7 +10,7 @@
 
     {
       imports = [
-        self.nixosModules.fw13Hardware
+        self.modules.nixos.fw13Hardware
       ];
 
       # Use the systemd-boot EFI boot loader.
