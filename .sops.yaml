@@ -1,0 +1,10 @@
+# Resusable key references
+keys:
+  - &fw13 age187d0vj2a89f30p0x3vev56x8hja6cc5nq56gzhyljpj3zyjkkaeqvc5mzm
+ 
+creation_rules:
+  - path_regex: secrets/.*\.yaml$
+    key_groups:
+      - age:
+        - *fw13 
+

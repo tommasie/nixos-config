@@ -11,6 +11,16 @@
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
     nix-amd-ai.url = "github:noamsto/nix-amd-ai";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    "home-manager" = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixvim.url = "github:nix-community/nixvim";
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
