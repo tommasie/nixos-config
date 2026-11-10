@@ -22,12 +22,15 @@
         jq
       ];
 
-      programs.git.settings.user = {
-        name = "Thomas Collerton";
-        email = "tho.collerton@gmail.com";
-      };
-
       sops.secrets.github_token = { };
+      sops.secrets.git_identity = { };
+
+      programs.git.includes = [ { path = config.sops.secrets.git_identity.path; } ];
+      # programs.git.settings.user = {
+      #   name = "Thomas Collerton";
+      #   email = "tho.collerton@gmail.com";
+      # };
+
       home.sessionVariables = {
         GH_TOKEN = "$(cat ${config.sops.secrets.github_token.path})";
       };
