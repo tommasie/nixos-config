@@ -128,7 +128,6 @@
         peazip
         file-roller
         opencode
-        lazygit
         pavucontrol
 
         # Python
