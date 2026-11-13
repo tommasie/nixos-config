@@ -16,8 +16,6 @@
       home.stateVersion = "25.05";
 
       home.packages = with pkgs; [
-        direnv
-        nix-direnv
         lazygit
         jq
       ];
@@ -26,10 +24,11 @@
       sops.secrets.git_identity = { };
 
       programs.git.includes = [ { path = config.sops.secrets.git_identity.path; } ];
-      # programs.git.settings.user = {
-      #   name = "Thomas Collerton";
-      #   email = "tho.collerton@gmail.com";
-      # };
+
+      programs.direnv = {
+        enable = true;
+        nix-direnv.enable = true;
+      };
 
       home.sessionVariables = {
         GH_TOKEN = "$(cat ${config.sops.secrets.github_token.path})";
