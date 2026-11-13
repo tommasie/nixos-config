@@ -2,6 +2,7 @@
   flake.modules.homeManager.fish =
     { pkgs, ... }:
     {
+      home.packages = [ pkgs.grc ];
       programs.fish = {
         enable = true;
         plugins = [

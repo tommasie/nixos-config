@@ -2,7 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-hardware = {
-      url = "path:/home/thomas/projects/nixos-hardware/";
+      url = "github:tommasie/nixos-hardware";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -11,7 +11,7 @@
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
     nix-amd-ai.url = "github:noamsto/nix-amd-ai";
     nix-gaming.url = "github:fufexan/nix-gaming";
-    "home-manager" = {
+    home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
