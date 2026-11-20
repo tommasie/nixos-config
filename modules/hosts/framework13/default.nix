@@ -5,7 +5,7 @@
       self.modules.nixos.homeManager
       {
         home-manager.users.thomas.imports = with self.modules.homeManager; [
-          thomas
+          common
           fw13
         ];
       }
